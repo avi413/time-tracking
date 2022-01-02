@@ -35,8 +35,6 @@ function handleTimeCardData (time) {
 });
 }
 ```
-```
-
 ## Author
 
 - Website - [Avi Dalal](https://github.com/avi413)
