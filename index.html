@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="body">
+<main class="main">
+  <div class="page">
+    <section class="grid">
+      <div class="profile">
+        <div class="profile__head">
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson" class="profile__img">
+          <p class="profile__report">Report for</p>
+          <h1 class="profile__name">Jeremy Robson</h1>
+        </div>
+        <ul class="profile__data">
+          <li class="profile__time"><button type="button" class="profile__btn profile__btn_type_daily">Daily</button></li>
+          <li class="profile__time"><button type="button" class="profile__btn profile__btn_type_weekly">Weekly</button></li>
+          <li class="profile__time"><button type="button" class="profile__btn profile__btn_type_monthly">Monthly</button></li>
+        </ul>
+      </div>
+      <section class="cards">
+        <ul class="cards__list">
+          <template id="card-template">
+            <li class="card">
+              <div class="card__top">
+                <img class="card__top-img" src="./images/icon-work.svg" alt="work">
+              </div>
+              <div class="card__data">
+                <div class="card__head">
+                  <h2 class="card__title"></h2>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipsis">
+                </div>
+                <p class="card__hrs"></p>
+                <p class="card__lsat-time">Last Week - 36hrs</p>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </section> 
+  
+  </div>
+ 
+</main>
+<footer class="footer">
+  <div class="attribution">
+    Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="attribution__link" href="https://github.com/avi413">Avi Dalal</a>.
+  </div>
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
