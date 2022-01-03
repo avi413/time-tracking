@@ -115,11 +115,17 @@ const dailyBtn = document.querySelector(".profile__btn_type_daily");
 const weeklyBtn = document.querySelector(".profile__btn_type_weekly");
 const monthlyyBtn = document.querySelector(".profile__btn_type_monthly");
 
-dailyBtn.addEventListener('click',() => handleTimeCardData("daily")); 
-weeklyBtn.addEventListener('click',() => handleTimeCardData("weekly")); 
-monthlyyBtn.addEventListener('click',() => handleTimeCardData("monthly")); 
+dailyBtn.addEventListener('click', handleTimeCardData); 
+weeklyBtn.addEventListener('click', handleTimeCardData); 
+monthlyyBtn.addEventListener('click',handleTimeCardData); 
 
-function handleTimeCardData (time) {
+function handleTimeCardData (evt) {
+  const button =  document.querySelectorAll('button');
+  button.forEach( btn => {
+    btn.classList.remove('profile__btn_type_active'); 
+  });
+  const time = evt.target.getAttribute('name');
+  this.classList.toggle("profile__btn_type_active");
   initialCards.forEach(element => {
     editCard(element,time);
 });
