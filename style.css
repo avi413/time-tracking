@@ -8,21 +8,26 @@
     margin: auto;
 }
 
-.page {
-    margin-top: 150px;
+
+
+@media only screen and (max-width: 1150px) {
+    .page { 
+        margin-top: 100px;
+    }
 }
 .grid {
+    height: 100vh;
     display: grid;
     justify-content: center;
+    align-items: center;
     grid-template: 
-            "profile cards" 1fr
-            "profile cards" 1fr;
+            "profile cards";
     margin: auto;
     gap: 20px;
+    
 }
 .profile {
     width: 220px;
-    grid-area: profile;
 }
 @media only screen and (max-width: 1150px) {
     .grid { 
