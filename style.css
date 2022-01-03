@@ -17,22 +17,36 @@
     grid-template: 
             "profile cards" 1fr
             "profile cards" 1fr;
-
     margin: auto;
     gap: 20px;
 }
-
 .profile {
-    max-width: 250px;
+    width: 220px;
     grid-area: profile;
 }
+@media only screen and (max-width: 1150px) {
+    .grid { 
+        grid-template: 
+        "profile" 1fr
+        "cards " 1fr;
+    }
+    .profile {
+        width: 100%;
+    }
+    
+    .profile__data {
+        grid-auto-flow: column;
+    }
+}
+
+
 .profile__head {
     background-color: hsl(246, 80%, 60%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 20px 20px 80px;
+    padding: 20px 20px 60px;
     box-sizing:  content-box;
     position:relative;
     margin-bottom: -20px;
@@ -50,7 +64,15 @@
     color: hsl(236, 100%, 87%);
 }
 
+
+
+.profile__text {
+    display: flex;
+    flex-direction: column;
+}
+
 .profile__name {
+    max-width: 200px;
     font-weight: 300;
     margin: 0;
 }
@@ -63,6 +85,25 @@
     list-style: none;
     display: grid;
     gap:20px;
+}
+
+@media screen and (max-width: 525px) {
+    .profile__head {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    .profile__report {
+        margin: 0;
+    }
+    
+    .profile__name {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+
 }
 
 .profile__btn {
@@ -87,8 +128,47 @@
             "exercise social self-care" 1fr;
     gap: 20px
 }
+
+@media only screen and (max-width: 825px) {
+    .grid {
+        grid-template:
+            "profile" 460px
+            "cards " 1fr;
+    }
+
+    .cards__list { 
+        grid-template: 
+        "work play " 1fr
+        "study exercise" 1fr
+        "social self-care" 1fr;
+    }
+
+}
+
 .card {
-    width: 250px;
+    min-width: 250px;
+}
+
+@media only screen and (max-width: 545px) {
+    .grid {
+        grid-template:
+            "profile" 190px
+            "cards " 1fr;
+    }
+    
+    .cards__list { 
+        grid-template: 
+        "work " 1fr
+        "play " 1fr
+        "study" 1fr
+        "exercise" 1fr
+        "social" 1fr
+        "self-care" 1fr;
+    }
+    .card {
+        max-width: 350px;
+    }
+
 }
 
 .card_type_work {
@@ -162,6 +242,18 @@
     font-size: 18px;
 }
 
+.card__times {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 545px) {
+    .card__times {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 .card__hrs {
     margin: 0;
     font-size: 50px;
