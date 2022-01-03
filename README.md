@@ -1,6 +1,6 @@
-# Frontend Mentor - NFT preview card component solution
+# Frontend Mentor - time-tracking-dashboard-main
 
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U).
+This is a solution to the [time-tracking-dashboard-main component challenge on Frontend Mentor](https://www.frontendmentor.io/solutions/timetrackingdashboardmain-7U9VWFZRS).
 ## Table of contents
 
 
